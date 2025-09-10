@@ -47,7 +47,7 @@ p.body-text {
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 """, unsafe_allow_html=True)
 
-# ------------------ Sidebar: Ravishing Design ------------------
+# ------------------ Sidebar: Premium Ravishing Design ------------------
 st.sidebar.markdown("""
 <style>
 /* Gradient background for sidebar */
@@ -66,40 +66,63 @@ st.sidebar.markdown("""
     margin-bottom: 10px;
 }
 
-/* Helpline and resource text */
-.sidebar p {
+/* Helpline, resource, and text */
+.sidebar p, .sidebar a {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 15px;
     color: #333333;
     line-height: 1.5;
     margin-bottom: 8px;
+    text-decoration: none;
 }
 
 /* Link hover effect */
-.sidebar a {
-    text-decoration: none;
-    color: #FF1493;
-}
 .sidebar a:hover {
     color: #FF69B4;
 }
 </style>
 """, unsafe_allow_html=True)
 
+# ------------------ Helplines ------------------
 st.sidebar.markdown("""
-<div style="padding:10px; border-radius:15px; background-color:rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<div style="padding:10px; border-radius:15px; background-color:rgba(255,255,255,0.85); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
 <h2>🌈 Helplines</h2>
 <p>📞 <strong>Trevor Project (US):</strong> 1-866-488-7386</p>
 <p>📞 <strong>Samaritans (UK):</strong> 116 123</p>
 <p>📞 <strong>AASRA (India):</strong> +91-9820466726</p>
 </div>
+""", unsafe_allow_html=True)
 
-<div style="margin-top:20px; padding:10px; border-radius:15px; background-color:rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+# ------------------ Resources ------------------
+st.sidebar.markdown("""
+<div style="margin-top:20px; padding:10px; border-radius:15px; background-color:rgba(255,255,255,0.85); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
 <h2>🧘 Resources</h2>
 <p>🌿 <a href='https://www.youtube.com/watch?v=inpok4MKVLM' target='_blank'>Mindfulness Meditation</a></p>
 <p>🌿 <a href='https://www.youtube.com/watch?v=30VMIEmA114' target='_blank'>Grounding Exercise</a></p>
 </div>
 """, unsafe_allow_html=True)
+
+# ------------------ About the Founder ------------------
+st.sidebar.markdown("""
+<div style="margin-top:20px; padding:10px; border-radius:15px; background-color:rgba(255,255,255,0.85); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<h2>🌟 About the Founder</h2>
+<p><strong>Naytik Jain</strong> is the passionate creator behind HeartHaven. Driven by a vision to make mental health support accessible, inclusive, and empathetic, Naytik believes everyone deserves a safe space to be heard.</p>
+<p><em>“HeartHaven is my way of ensuring that every heart, no matter its journey, has a place to feel understood and supported.”</em></p>
+</div>
+""", unsafe_allow_html=True)
+
+# ------------------ Suggested Prompts ------------------
+st.sidebar.markdown("""
+<div style="margin-top:20px; padding:10px; border-radius:15px; background-color:rgba(255,255,255,0.85); box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<h2>💬 Suggested Prompts</h2>
+<p>- How can I cope with stress today?</p>
+<p>- Can you suggest some LGBTQ+ friendly resources?</p>
+<p>- I’m feeling anxious, what should I do?</p>
+<p>- Tips for self-care this week</p>
+<p>- Ways to build confidence and resilience</p>
+</div>
+""", unsafe_allow_html=True)
+
 
 
 # ------------------ Title & Description ------------------
@@ -110,7 +133,9 @@ st.markdown(
     "Every response is crafted to be concise, actionable, and uplifting — no more than 150 words — "
     "to ensure clarity and focus. The system dynamically interprets your feelings and provides guidance, "
     "resources, and reflective suggestions tailored just for you. Here, your voice is heard, your identity is respected, "
-    "and every response is designed to nurture emotional well-being."
+    "and every response is designed to nurture emotional well-being. "
+    ""
+    "Founder: Naytik Jain"
     '</p>',
     unsafe_allow_html=True
 )
