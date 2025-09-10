@@ -1,12 +1,12 @@
 import streamlit as st
 from openai import OpenAI
-from dotenv import load_dotenv
-import os
+import streamlit as st
+from openai import OpenAI
 
-# ------------------ Load API Key ------------------
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+# Get the API key from Streamlit secrets
+api_key = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(api_key=api_key)
+
 
 # ------------------ Page Config ------------------
 st.set_page_config(
