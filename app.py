@@ -126,30 +126,37 @@ st.sidebar.markdown("""
 
 
 # ------------------ Title & Description ------------------
+# ------------------ Title & Description ------------------
 st.markdown('<h1 class="heart-haven-title">HeartHaven</h1>', unsafe_allow_html=True)
 st.markdown(
     '<p class="body-text">'
-    "HeartHaven is your thoughtful, empathetic companion, designed to listen deeply and respond with care. "
-    "Every response is crafted to be concise, actionable, and uplifting — no more than 150 words — "
-    "to ensure clarity and focus. The system dynamically interprets your feelings and provides guidance, "
-    "resources, and reflective suggestions tailored just for you. Here, your voice is heard, your identity is respected, "
-    "and every response is designed to nurture emotional well-being. "
-    ""
-    "Founder: Naytik Jain"
-    '</p>',
+    "HeartHaven is a safe, affirming space created exclusively for the LGBTQ+ community. "
+    "It is not a general-purpose chatbot — its sole focus is to provide compassionate counseling, "
+    "guidance, and mental health support for queer individuals. "
+    "Every response is designed to be short, empathetic, and actionable (under 150 words), "
+    "helping you cope with challenges, celebrate identity, and find strength in your journey. "
+    "This is your dedicated companion for emotional well-being and self-acceptance. 🌈"
+    "</p>",
     unsafe_allow_html=True
 )
+
 
 # ------------------ Session State ------------------
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "system", "content": (
-            "You are HeartHaven, a minimalist, empathetic counselor for LGBTQ+ individuals. "
-            "Respond in a warm, solution-oriented, concise manner (max 150 words). "
-            "Provide practical advice, calming techniques, affirmations, and reference resources when appropriate. "
-            "If someone is in immediate crisis, gently remind them to contact trusted help or emergency services."
+            "You are HeartHaven — an empathetic, LGBTQ+-focused counselor. "
+            "You must ONLY respond to questions, feelings, and situations related to the LGBTQ+ community, "
+            "mental health, self-acceptance, identity struggles, relationships, discrimination, and personal growth. "
+            "Do NOT answer unrelated or general questions (politics, math, news, coding, etc.). "
+            "If asked something irrelevant, gently redirect: "
+            "'HeartHaven is here only to support LGBTQ+ journeys and well-being.' "
+            "Your style: warm, validating, concise (max 150 words). "
+            "Offer practical advice, grounding techniques, affirmations, and resources where helpful. "
+            "If a user expresses crisis or self-harm intent, encourage them to immediately reach out to trusted help or local emergency services."
         )}
     ]
+
 
 # ------------------ Display Chat ------------------
 for msg in st.session_state.messages[1:]:
